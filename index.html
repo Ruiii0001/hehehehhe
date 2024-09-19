@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Hiiiiii</title>
+<style>
+p {
+    text-align: center;
+    font-size: 32px;
+    font-family: Candara, Oswald;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+}
+#botao1 {
+    position: fixed;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+#botao2 {
+    position: absolute;
+    left: 42%;
+    top: 68%;
+    transition: left 0.2s, top 0.2s;
+}
+</style>
+</head>
+<body>
+<p>Can we fuck please???</p>
+<img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
+
+<button id="botao1">OFC POGII</button>
+<button id="botao2">NAH UH</button>
+
+<script>
+// "NO" button moves when tapped
+const button2 = document.getElementById('botao2');
+
+// Move the button when tapped or hovered
+function moveButton() {
+    const newLeft = Math.random() * 8 + 38;  // Moves between 38% and 46% horizontally
+    const newTop = Math.random() * 4 + 66;   // Moves between 66% and 70% vertically
+    button2.style.left = newLeft + '%';
+    button2.style.top = newTop + '%';
+}
+
+// Add both 'mouseover' for desktop and 'touchstart' for mobile
+button2.addEventListener('mouseover', moveButton);
+button2.addEventListener('touchstart', function(e) {
+    e.preventDefault(); // Prevent touch click
+    moveButton();
+});
+
+// Alert when "YES BBY!" button is clicked
+document.getElementById('botao1').addEventListener('click', function() {
+    alert('YAYY COME HEREE 😍❤️');
+});
+</script>
+</body>
+</html>
